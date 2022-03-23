@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using CSharpCourse.Common;
 
 namespace CSharpCourse.Basic
 {
-    class BasicOne
+    class ControlFlowIfElse
     {
 
         // Write a program and ask the user to enter a number. The number should be between 1 to 10. 
@@ -12,10 +11,10 @@ namespace CSharpCourse.Basic
         public static void ExerciseOne()
         {
             Console.WriteLine("Enter a number:");
-            var raw_input = Console.ReadLine();
-            var input = ValidateNumber(raw_input);
-            var result = (input <= 10 || input >= 0) ? "Valid" : "Invalid";
-            Console.WriteLine("Your number is {0}", result);
+            var numberRaw = Console.ReadLine();
+            var number = CommonMethods.ValidateNumber(numberRaw);
+            Console.WriteLine("Your number is {0}", 
+                (number <= 10 || number >= 0) ? "Valid" : "Invalid");
         }
 
 
@@ -23,13 +22,13 @@ namespace CSharpCourse.Basic
         public static void ExerciseTwo()
         {
             Console.WriteLine("Enter first number");
-            var numberOne_raw = Console.ReadLine();
-            var numberOne = ValidateNumber(numberOne_raw);
+            var firstNumberRaw = Console.ReadLine();
+            var firstNumber = CommonMethods.ValidateNumber(firstNumberRaw);
             Console.WriteLine("Enter second number");
-            var numberTwo_raw = Console.ReadLine();
-            var numberTwo = ValidateNumber(numberTwo_raw);
-            var result = (numberOne > numberTwo) ? numberOne : numberTwo;
-            Console.WriteLine("The bigest number is: {0}", result);
+            var secondNumberRaw = Console.ReadLine();
+            var secondNumber = CommonMethods.ValidateNumber(secondNumberRaw);
+            Console.WriteLine("The bigest number is: {0}", 
+                (firstNumber > secondNumber) ? firstNumber : secondNumber);
         }
 
         // Write a program and ask the user to enter the width and height of an image.
@@ -37,13 +36,13 @@ namespace CSharpCourse.Basic
         public static void ExerciseThree()
         {
             Console.WriteLine("Enter width");
-            var numberOne_raw = Console.ReadLine();
-            var numberOne = ValidateNumber(numberOne_raw);
+            var widthRaw = Console.ReadLine();
+            var width = CommonMethods.ValidateNumber(widthRaw);
             Console.WriteLine("Enter height");
-            var numberTwo_raw = Console.ReadLine();
-            var numberTwo = ValidateNumber(numberTwo_raw);
-            var result = (numberOne > numberTwo) ? "Landscape" : "Portrait";
-            Console.WriteLine("Your picture is a {0}", result);
+            var heightRaw = Console.ReadLine();
+            var height = CommonMethods.ValidateNumber(heightRaw);
+            Console.WriteLine("Your picture is a {0}", 
+                (width > height) ? "Landscape" : "Portrait");
         }
 
         // Your job is to write a program for a speed camera.
@@ -56,11 +55,11 @@ namespace CSharpCourse.Basic
         public static void ExerciseFour()
         {
             Console.WriteLine("Enter speed limit");
-            var numberOne_raw = Console.ReadLine();
-            var speedLimit = ValidateNumber(numberOne_raw);
+            var speedLimitRaw = Console.ReadLine();
+            var speedLimit = CommonMethods.ValidateNumber(speedLimitRaw);
             Console.WriteLine("Enter car speed");
-            var numberTwo_raw = Console.ReadLine();
-            var carSpeed = ValidateNumber(numberTwo_raw);
+            var carSpeedRaw = Console.ReadLine();
+            var carSpeed = CommonMethods.ValidateNumber(carSpeedRaw);
             var aboveLimit = carSpeed - speedLimit;
             if (aboveLimit <= 0)
             {
@@ -80,19 +79,5 @@ namespace CSharpCourse.Basic
             }
         }
 
-        static int ValidateNumber(string number)
-        {
-            var result = 0;
-            try
-            {
-                result = Int32.Parse(number);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Your input is not a number");
-                Environment.Exit(0);
-            }
-            return result;
-        }
     }
 }

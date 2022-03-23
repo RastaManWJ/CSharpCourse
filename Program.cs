@@ -6,10 +6,15 @@ namespace CSharpCourse
     {
         static void Main(string[] args)
         {
-            BasicOne.ExerciseOne();
-            BasicOne.ExerciseTwo();
-            BasicOne.ExerciseThree();
-            BasicOne.ExerciseFour();
+            //ControlFlowIfElse.ExerciseOne();
+            //ControlFlowIfElse.ExerciseTwo();
+            //ControlFlowIfElse.ExerciseThree();
+            //ControlFlowIfElse.ExerciseFour();
+            //ControlFlowLoops.ExerciseOne();
+            //ControlFlowLoops.ExerciseTwo();
+            //ControlFlowLoops.ExerciseThree();
+            //ControlFlowLoops.ExerciseFour();
+            ControlFlowLoops.ExerciseFive();
         }
     }
 }
