@@ -14,7 +14,12 @@ namespace CSharpCourse
             //ControlFlowLoops.ExerciseTwo();
             //ControlFlowLoops.ExerciseThree();
             //ControlFlowLoops.ExerciseFour();
-            ControlFlowLoops.ExerciseFive();
+            //ControlFlowLoops.ExerciseFive();
+            //ArraysAndLists.ExerciseOne();
+            //ArraysAndLists.ExerciseTwo();
+            //ArraysAndLists.ExerciseThree();
+            //ArraysAndLists.ExerciseFour();
+            //ArraysAndLists.ExerciseFive();
         }
     }
 }
