@@ -21,3 +21,5 @@ Also if anyone would come here to see that - I'd love to hear any advices or sol
 	- [ ] Exercise - FizzBuzz
 	- [ ] Exercise - DemeritPointsCalculator
 	- [ ] Exercise - Stack
+	- [ ] Exercise - InstallerHelper
+	- [ ] Exercise - EmployeeHelper
