@@ -1,5 +1,4 @@
-﻿using System;
-using CSharpCourse.Basic;
+﻿using CSharpCourse.Basic;
 
 namespace CSharpCourse
 {

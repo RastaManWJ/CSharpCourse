@@ -13,7 +13,7 @@ namespace CSharpCourse.Basic
         {
             Console.WriteLine("Enter a number:");
             var raw_input = Console.ReadLine();
-            var input = validateNumber(raw_input);
+            var input = ValidateNumber(raw_input);
             var result = (input <= 10 || input >= 0) ? "Valid" : "Invalid";
             Console.WriteLine("Your number is {0}", result);
         }
@@ -24,10 +24,10 @@ namespace CSharpCourse.Basic
         {
             Console.WriteLine("Enter first number");
             var numberOne_raw = Console.ReadLine();
-            var numberOne = validateNumber(numberOne_raw);
+            var numberOne = ValidateNumber(numberOne_raw);
             Console.WriteLine("Enter second number");
             var numberTwo_raw = Console.ReadLine();
-            var numberTwo = validateNumber(numberTwo_raw);
+            var numberTwo = ValidateNumber(numberTwo_raw);
             var result = (numberOne > numberTwo) ? numberOne : numberTwo;
             Console.WriteLine("The bigest number is: {0}", result);
         }
@@ -38,10 +38,10 @@ namespace CSharpCourse.Basic
         {
             Console.WriteLine("Enter width");
             var numberOne_raw = Console.ReadLine();
-            var numberOne = validateNumber(numberOne_raw);
+            var numberOne = ValidateNumber(numberOne_raw);
             Console.WriteLine("Enter height");
             var numberTwo_raw = Console.ReadLine();
-            var numberTwo = validateNumber(numberTwo_raw);
+            var numberTwo = ValidateNumber(numberTwo_raw);
             var result = (numberOne > numberTwo) ? "Landscape" : "Portrait";
             Console.WriteLine("Your picture is a {0}", result);
         }
@@ -57,10 +57,10 @@ namespace CSharpCourse.Basic
         {
             Console.WriteLine("Enter speed limit");
             var numberOne_raw = Console.ReadLine();
-            var speedLimit = validateNumber(numberOne_raw);
+            var speedLimit = ValidateNumber(numberOne_raw);
             Console.WriteLine("Enter car speed");
             var numberTwo_raw = Console.ReadLine();
-            var carSpeed = validateNumber(numberTwo_raw);
+            var carSpeed = ValidateNumber(numberTwo_raw);
             var aboveLimit = carSpeed - speedLimit;
             if (aboveLimit <= 0)
             {
@@ -80,7 +80,7 @@ namespace CSharpCourse.Basic
             }
         }
 
-        static int validateNumber(string number)
+        static int ValidateNumber(string number)
         {
             var result = 0;
             try
