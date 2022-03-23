@@ -20,6 +20,8 @@ namespace CSharpCourse
             //ArraysAndLists.ExerciseThree();
             //ArraysAndLists.ExerciseFour();
             //ArraysAndLists.ExerciseFive();
+            //WorkingWithText.ExerciseOne();
+            WorkingWithText.ExerciseTwo();
         }
     }
 }

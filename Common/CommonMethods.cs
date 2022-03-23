@@ -9,13 +9,17 @@ namespace CSharpCourse.Common
         public static int ValidateNumber(string number)
         {
             var result = 0;
-            try
+            var numberIsValid = false;
+            while (!numberIsValid)
             {
-                result = Int32.Parse(number);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Your input is not a number");
+                if (int.TryParse(number, out result))
+                    numberIsValid = true;
+                else
+                {
+                    Console.WriteLine("Your number is not Valid. Try again!");
+                    number = Console.ReadLine();
+                }
+
             }
             return result;
         }
