@@ -1,4 +1,6 @@
 ﻿using CSharpCourse.Basic;
+using CSharpCourse.Intermediate;
+using System.Threading;
 
 namespace CSharpCourse
 {
@@ -6,42 +8,48 @@ namespace CSharpCourse
     {
         static void Main(string[] args)
         {
-            //ControlFlow If and Else Exercises
+            //IntermediateExOne();
+            //IntermediateExTwo();
+        }
 
-            //ControlFlowIfElse.ExerciseOne();
-            //ControlFlowIfElse.ExerciseTwo();
-            //ControlFlowIfElse.ExerciseThree();
-            //ControlFlowIfElse.ExerciseFour();
+        private static void IntermediateExOne()
+        {
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Thread.Sleep(1000);
+            stopwatch.Stop();
 
-            //ControlFlow Loops Exercises
+            stopwatch.Start();
+            try
+            {
+                stopwatch.Start();
+            }
+            catch (System.Exception)
+            {
+                System.Console.WriteLine("Starting a started watch is not possible.");
+            }
+            stopwatch.Stop();
+            try
+            {
+                stopwatch.Stop();
+            }
+            catch (System.Exception)
+            {
+                System.Console.WriteLine("Stopping a stopped watch is not possible.");
+            }
+        }
 
-            //ControlFlowLoops.ExerciseOne();
-            //ControlFlowLoops.ExerciseTwo();
-            //ControlFlowLoops.ExerciseThree();
-            //ControlFlowLoops.ExerciseFour();
-            //ControlFlowLoops.ExerciseFive();
-
-            //Arrays and Lists Exercises
-
-            //ArraysAndLists.ExerciseOne();
-            //ArraysAndLists.ExerciseTwo();
-            //ArraysAndLists.ExerciseThree();
-            //ArraysAndLists.ExerciseFour();
-            //ArraysAndLists.ExerciseFive();
-
-            //Text Exercises
-
-            //WorkingWithText.ExerciseOne();
-            //WorkingWithText.ExerciseTwo();
-            //WorkingWithText.ExerciseThree();
-            //WorkingWithText.ExerciseFour();
-            //WorkingWithText.ExerciseFive();
-
-            //File Exercises
-
-            //WorkingWithFiles.ExerciseOne();
-            WorkingWithFiles.ExerciseTwo();
-
+        private static void IntermediateExTwo()
+        {
+            var post = new Post();
+            System.Console.WriteLine(post.VoteLevel);
+            post.UpVote();
+            System.Console.WriteLine(post.VoteLevel);
+            post.DownVote();
+            System.Console.WriteLine(post.VoteLevel);
+            post.UpVote();
+            System.Console.WriteLine(post.VoteLevel);
+            System.Console.WriteLine(post.GetDateTime());
         }
     }
 }
