@@ -11,7 +11,7 @@ Also if anyone would come here to see that - I'd love to hear any advices or sol
 	- [x] Working with Text Exercises
 	- [x] Working with Files Exercises
 - [ ] Intermediate Level Course
-	- [ ] Classes Exercises
+	- [x] Classes Exercises
 	- [ ] Inheritance Exercises
 	- [ ] Polymorphism Exercises
 	- [ ] Interfaces Exercises
