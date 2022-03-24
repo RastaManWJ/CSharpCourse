@@ -8,7 +8,7 @@ Also if anyone would come here to see that - I'd love to hear any advices or sol
 - [ ] Basics for Beginners
 	- [x] Control Flow Exercises
 	- [x] Arrays and Lists Exercises
-	- [ ] Working with Text Exercises
+	- [x] Working with Text Exercises
 	- [ ] Working with Files Exercises
 - [ ] Intermediate Level Course
 	- [ ] Classes Exercises

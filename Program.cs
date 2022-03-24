@@ -7,7 +7,7 @@ namespace CSharpCourse
         static void Main(string[] args)
         {
             //ControlFlow If and Else Exercises
-            
+
             //ControlFlowIfElse.ExerciseOne();
             //ControlFlowIfElse.ExerciseTwo();
             //ControlFlowIfElse.ExerciseThree();
@@ -20,7 +20,7 @@ namespace CSharpCourse
             //ControlFlowLoops.ExerciseThree();
             //ControlFlowLoops.ExerciseFour();
             //ControlFlowLoops.ExerciseFive();
-            
+
             //Arrays and Lists Exercises
 
             //ArraysAndLists.ExerciseOne();
@@ -28,7 +28,7 @@ namespace CSharpCourse
             //ArraysAndLists.ExerciseThree();
             //ArraysAndLists.ExerciseFour();
             //ArraysAndLists.ExerciseFive();
-            
+
             //Text Exercises
 
             //WorkingWithText.ExerciseOne();
@@ -36,6 +36,11 @@ namespace CSharpCourse
             //WorkingWithText.ExerciseThree();
             //WorkingWithText.ExerciseFour();
             //WorkingWithText.ExerciseFive();
+
+            //File Exercises
+
+            //WorkingWithFiles.ExerciseOne();
+            WorkingWithFiles.ExerciseTwo();
 
         }
     }
