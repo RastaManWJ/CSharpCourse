@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
+using System.Threading;
 
 namespace CSharpCourse.Basic
 {
@@ -13,7 +16,7 @@ namespace CSharpCourse.Basic
         {
             var numbers = AskForHyphenStr();
             var numbersList = ConvertHyphenStrToIntList(numbers);
-            var isAscending = 0;
+            int isAscending;
             if (numbersList[0] == numbersList[1] + 1)
                 isAscending = 1;
             else if (numbersList[0] == numbersList[1] - 1)
@@ -67,7 +70,21 @@ namespace CSharpCourse.Basic
         //If the user doesn't provide any values, consider it as invalid time.
         public static void ExerciseThree()
         {
-            //TODO
+            Console.WriteLine("Write a valid time");
+            var userTime = Console.ReadLine();
+            var userTimeResult = new StringBuilder();
+            try
+            {
+                DateTime convertedUserTime = DateTime.ParseExact(userTime, "HH:mm", null);
+                var temp = convertedUserTime.ToString().Split(' ');
+                userTimeResult.Append(temp[1]);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Your time is not correct!");
+                return;
+            }
+            Console.WriteLine("Ok {0}", userTimeResult);
         }
 
         //Write a program and ask the user to enter a few words separated by a space.
@@ -77,7 +94,18 @@ namespace CSharpCourse.Basic
         //So, if the user types "NUMBER OF STUDENTS", the program should still display "NumberOfStudents".
         public static void ExerciseFour()
         {
-            //TODO
+            Console.WriteLine("Type a few words separated by space to make variable name");
+            var variableWords = Console.ReadLine();
+            var wordsList = variableWords.Trim().Replace('_', ' ').Replace('-', ' ').Split(' ');
+            var variableName = new StringBuilder();
+            foreach(var word in wordsList)
+            {
+                var tempBuilder = new StringBuilder(word.ToLower());
+                if (Char.IsLetter(tempBuilder[0]))
+                    tempBuilder[0] -= ' ';
+                variableName.Append(tempBuilder);
+            }
+            Console.WriteLine(variableName);
         }
 
         //Write a program and ask the user to enter an English word.
@@ -85,7 +113,15 @@ namespace CSharpCourse.Basic
         //So, if the user enters "inadequate", the program should display 6 on the console.
         public static void ExerciseFive()
         {
-            //TODO
+            Console.WriteLine("Type an english word");
+            var word = Console.ReadLine().ToLower();
+            var wordTemp = new StringBuilder(word);
+            wordTemp.Replace("a", string.Empty)
+                .Replace("e", string.Empty)
+                .Replace("o", string.Empty)
+                .Replace("u", string.Empty)
+                .Replace("i", string.Empty);
+            Console.WriteLine("Your word had {0} vowels.", word.Length - wordTemp.Length);
         }
 
         static string AskForHyphenStr()

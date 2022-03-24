@@ -50,7 +50,7 @@ namespace CSharpCourse.Basic
             Console.WriteLine("Paste a number to calculate factorial.");
             var numberRaw = Console.ReadLine();
             var number = CommonMethods.ValidateNumber(numberRaw);
-            Console.WriteLine("Your factorial of {0}! = {1}", number, factorial(number));
+            Console.WriteLine("Your factorial of {0}! = {1}", number, Factorial(number));
         }
 
         // Write a program that picks a random number between 1 and 10.
@@ -99,7 +99,7 @@ namespace CSharpCourse.Basic
             }
         }
 
-        static int factorial(int number)
+        static int Factorial(int number)
         {
             var result = number;
             if(number < 1)
@@ -109,7 +109,7 @@ namespace CSharpCourse.Basic
             }
             else if(number != 1)
             {
-                result *= factorial(number - 1);
+                result *= Factorial(number - 1);
             }
             return result;
         }
