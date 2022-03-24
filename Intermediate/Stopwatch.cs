@@ -33,11 +33,20 @@ namespace CSharpCourse.Intermediate
             if (StartTime == DateTime.MinValue)
                 throw new InvalidOperationException("Stopwatch is not started!");
             EndTime = DateTime.Now;
+            ShowSpan();
+            ResetValues();
+        }
+
+        private void ShowSpan()
+        {
             TimeSpan timeSpan = EndTime - StartTime;
             Console.WriteLine("The time span is {0}", timeSpan);
+        }
+        
+        private void ResetValues()
+        {
             StartTime = DateTime.MinValue;
             EndTime = DateTime.MinValue;
         }
-        
     }
 }
