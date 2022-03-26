@@ -10,12 +10,12 @@ Also if anyone would come here to see that - I'd love to hear any advices or sol
 	- [x] Arrays and Lists Exercises
 	- [x] Working with Text Exercises
 	- [x] Working with Files Exercises
-- [ ] Intermediate Level Course
+- [x] Intermediate Level Course
 	- [x] Classes Exercises
-	- [ ] Inheritance Exercises
-	- [ ] Polymorphism Exercises
-	- [ ] Interfaces Exercises
-	- [ ] Optional - Bonus Intermediate Code Review's Exercises
+	- [x] Inheritance Exercises
+	- [x] Polymorphism Exercises
+	- [x] Interfaces Exercises
+	- [x] Optional - Bonus Intermediate Code Review's Exercises
 - [ ] Advanced Topics Course
 - [ ] Unit Testing Course
 	- [ ] Exercise - FizzBuzz
