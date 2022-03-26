@@ -10,6 +10,7 @@ namespace CSharpCourse
         {
             //IntermediateExOne();
             //IntermediateExTwo();
+            IntermediateStack();
         }
 
         private static void IntermediateExOne()
@@ -50,6 +51,17 @@ namespace CSharpCourse
             post.UpVote();
             System.Console.WriteLine(post.VoteLevel);
             System.Console.WriteLine(post.GetDateTime());
+        }
+
+        private static void IntermediateStack()
+        {
+            Stack defaultStack = new Stack();
+            defaultStack.Push(10);
+            defaultStack.Push(new Stack());
+            defaultStack.Push("Alalala");
+
+            defaultStack.Pop();
+            defaultStack.Clear();
         }
     }
 }
