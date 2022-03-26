@@ -7,7 +7,7 @@ namespace CSharpCourse.Intermediate
 {
     class Stack
     {
-        private object[] _stack;
+        private readonly object[] _stack;
         private int index = 0;
         private readonly int defaultSize = 10;
 
@@ -37,7 +37,7 @@ namespace CSharpCourse.Intermediate
             if (index == 0)
                 throw new InvalidOperationException("You cannot pop from empty stack");
             object removedItem = _stack[index - 1];
-            _stack[index - 1] = default(object);
+            _stack[index - 1] = default;
             return removedItem;
         }
 
@@ -45,7 +45,7 @@ namespace CSharpCourse.Intermediate
         {
             for (int i = index; i >= 0; i--)
             {
-                _stack[i] = default(object);
+                _stack[i] = default;
             }
             index = 0;
         }
