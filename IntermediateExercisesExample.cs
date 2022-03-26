@@ -78,5 +78,13 @@ namespace CSharpCourse
             sqlCommand.Execute();
             oracleCommand.Execute();
         }
+
+        public static void IntermediateWorkflowActivity()
+        {
+            WorkflowEngine workflowEngine = new WorkflowEngine();
+            workflowEngine.AddActivity(new ActivityOne());
+            workflowEngine.AddActivity(new ActivityTwo());
+            workflowEngine.Run();
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace CSharpCourse
             IntermediateExercisesExample.IntermediateStack();
             IntermediateExercisesExample.IntermediateDB();
             IntermediateExercisesExample.IntermediateDBCommand();
+            IntermediateExercisesExample.IntermediateWorkflowActivity();
         }
 
         
